@@ -1,0 +1,154 @@
+@import "fonts";
+
+body {
+  font: $roboto;
+  font-weight: $light;
+  /*color: $txt-primary; //color variable set elsewhere
+  background: $body-bg;
+  -webkit-text-size-adjust: 100%; //fix for iOS */
+}
+
+#div {
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  background-image: url("../../Images/stars.jpg");}
+
+
+  
+  
+ .buttonContainer{
+   margin-top: 20px;
+ }
+
+ .buttonPrimary{
+  margin-top: 10rem;
+}
+  
+
+.container1 {
+  display: flex;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 100px;
+  max-width: 100%;
+
+
+  @media (max-width: 481px) {
+   flex-direction: column;
+   margin-top: 10px;
+
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+ 
+   }
+}
+.imageContainer {
+  /*   background-color: rgb(238, 17, 128);
+ */
+  margin: 0.1rem;
+  padding: 0.1rem;
+  max-width: 10%
+}
+
+.momAndBaby {
+  margin: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 100%; height: auto;
+}
+
+
+.heroContainer {
+  /*   background-color: pink;
+ */
+
+  max-width: 50%;
+  margin: 0.2rem;
+  font-size: xx-large;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  
+  
+  /* height: 400px; */
+  @media (max-width: 481px) {
+    max-width: 100%;
+
+ 
+   }
+    
+
+  
+
+}
+
+.sectionTitle span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.sectionTitle div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+
+
+
+
+.section{
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.sectionTitle{
+
+  margin-top: 2rem;
+
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+   -ms-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+  
+
+}
+
+.sectionTitle h3 {
+  margin-left: 0.3rem;
+  font-weight: bold;
+  font-size:xx-large;
+}
+
+.aboutpuzzle{
+  background-color: black;
+}
+
+
+
+.button{
+  
+  background-image: linear-gradient(to right, #99ADFF 0%, #FFBCF2 51%, #F5D0E2 100%);
+}
+

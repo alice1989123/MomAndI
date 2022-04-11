@@ -1,0 +1,22 @@
+@import "fonts";
+
+body {
+  font: $roboto;
+  font-weight: $light;
+  /*color: $txt-primary; //color variable set elsewhere
+  background: $body-bg;
+  -webkit-text-size-adjust: 100%; //fix for iOS */
+}
+
+.footer_container{
+  background-color: pink;
+}
+
+/* .footer_subscription{
+
+} */
+
+.mintSection{
+  margin-top: 20rem;
+  margin-right: 20rem;
+}

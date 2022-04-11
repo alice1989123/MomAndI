@@ -1,0 +1,73 @@
+@import "fonts";
+
+body {
+  font: $roboto;
+  font-weight: $light;
+  /*color: $txt-primary; //color variable set elsewhere
+  background: $body-bg;
+  -webkit-text-size-adjust: 100%; //fix for iOS */
+}
+
+#div {
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  background-image: url("../../Images/stars.jpg");}
+  .hero{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+  }
+  
+  .imageWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    width: 100%;
+  }
+  
+  .intro{
+
+    min-height: 900px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+
+    background-image: url("../../Images/drawChildren.jpg");
+    background-size: 800px Auto;
+    background-repeat : no-repeat;
+    background-position : 100% 40%;
+    align-items: center;
+
+  
+
+  @media (max-width: 481px) {
+    flex-direction: column;
+  
+   }
+  
+  }
+  .heartDraw{
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    max-height: 500px;
+    border-radius: 5px;
+    background: linear-gradient(45DEG, #7A1036 , #FF7EBE , #F5D0E2);
+  
+  }
+
+  

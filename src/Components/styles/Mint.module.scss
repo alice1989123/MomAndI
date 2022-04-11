@@ -1,0 +1,116 @@
+@import "fonts";
+
+body {
+  font: $roboto;
+  font-weight: $light;
+  /*color: $txt-primary; //color variable set elsewhere
+  background: $body-bg;
+  -webkit-text-size-adjust: 100%; //fix for iOS */
+}
+
+#div {
+  margin: 0.2rem;
+  padding: 0.2rem;  
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  background-image: url("../../Images/stars.jpg");}
+
+  .connect{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+  }
+
+  .puzzle{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+
+    } 
+
+  }
+
+
+  .mint{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+   
+  }
+  .mint span {
+    margin-top: 0.5rem;
+  }
+
+
+.sectionTitle span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+
+}
+
+.sectionTitle div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+}
+
+
+
+
+
+.section{
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.sectionTitle{
+  margin: 2rem;
+
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+   -ms-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: center;
+
+  
+
+}
+
+.sectionTitle h3 {
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+
+
+  margin-left: 0.3rem;
+  font-weight: bold;
+  font-size:xx-large;
+}
+
+
+.button{
+  background-image: linear-gradient(to right, #99ADFF 0%, #FFBCF2 51%, #F5D0E2 100%);
+}

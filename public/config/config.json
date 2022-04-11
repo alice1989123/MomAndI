@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x5a676d3c7a476025ecd08c7903f3ede4383cd752",
+  "SCAN_LINK": "https://mumbai.polygonscan.com/token/0x5a676d3c7a476025ecd08c7903f3ede4383cd752",
+  "NETWORK": {
+    "NAME": "maticmum",
+    "SYMBOL": "Matic",
+    "ID": 80001
+  },
+  "NFT_NAME": "MoomAndI",
+  "SYMBOL": "MII",
+  "MAX_SUPPLY": 1000,
+  "WEI_COST": 50000000000000000,
+  "DISPLAY_COST": 0.05,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/moom-and-i-first-puzzle",
+  "SHOW_BACKGROUND": true
+}

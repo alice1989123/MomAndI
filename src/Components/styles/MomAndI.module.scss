@@ -1,0 +1,111 @@
+@import "fonts";
+
+body {
+  font: $roboto;
+  font-weight: $light;
+  /*color: $txt-primary; //color variable set elsewhere
+  background: $body-bg;
+  -webkit-text-size-adjust: 100%; //fix for iOS */
+}
+
+.background {
+  margin-top: 2rem;
+   background-image: url("../../Images/stars.jpg");
+   width: 100%;
+   margin: 2rem;
+
+
+
+}
+
+#div {
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+.hero{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+}
+
+h4 {
+  font-size: x-large;
+}
+
+.heartDraw{
+  width: auto;
+  max-width: 500px;
+  height: auto;
+  max-height: 500px;
+  border-radius: 5px;
+
+}
+
+.imageWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  width: 100%;
+}
+
+.intro{
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+
+
+@media (max-width: 710px) {
+  flex-direction: column;
+
+ }
+
+}
+
+
+.sectionTitle span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.sectionTitle div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+
+
+
+
+.section{
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.sectionTitle{
+
+  margin: 2rem;
+
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+   -ms-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+  
+
+}
+
+.sectionTitle h3 {
+  margin-left: 0.3rem;
+  font-weight: bold;
+  font-size:xx-large;
+}
+
