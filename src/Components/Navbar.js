@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import styles from "./styles/NavBar.module.scss";
 import { pink } from "@material-ui/core/colors";
 import { Link } from "react-router-dom";
-const pages = ["Home", "Moomy and I", "Mint", "Contact"];
+const pages = ["Home", "Little Luna", "Mint", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {

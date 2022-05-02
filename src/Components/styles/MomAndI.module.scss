@@ -9,10 +9,13 @@ body {
 }
 
 .background {
-  margin-top: 2rem;
+
+  margin-top: 4rem;
+  
    background-image: url("../../Images/stars.jpg");
    width: 100%;
    margin: 2rem;
+   
 
 
 
@@ -23,12 +26,14 @@ body {
   padding: 0.2rem;
 }
 
-.hero{
+.container{
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  justify-content: center;
   align-items: center;
-  max-width: 400px;
+  max-width: 900px;
 }
 
 h4 {

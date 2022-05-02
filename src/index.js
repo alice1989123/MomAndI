@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
-import MomAndI from "./Components/Mommy_and_I";
+import Little_Luna from "./Components/Little_Luna";
 import Mint from "./Components/Mint";
 import Contact from "./Components/Contact";
 import reportWebVitals from "./reportWebVitals";
@@ -17,7 +17,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
 
         <Route path="/Home" element={<Home />} />
-        <Route path="/Moomy_and_I" element={<MomAndI />} />
+        <Route path="/Little_Luna" element={<Little_Luna />} />
         <Route path="/Mint" element={<Mint />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>

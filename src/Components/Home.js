@@ -1,24 +1,40 @@
 //import MomAndBaby from "../Images/mooAndBaby.jpg";
-import draw from "../Images/drow_5.png";
+import draw from "../Images/family_11.jpeg";
 import styles from "./styles/Home.module.scss";
 import Container from "@material-ui/core/Container";
 import { Button, Grid, Box, Stack, Typography } from "@mui/material";
 import Card from "./Card";
 import { IconContext } from "react-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import { FaPuzzlePiece } from "react-icons/fa";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <Container className={styles.container}>
       <section>
         <Box className={styles.container1}>
           <Box className={styles.heroContainer}>
-            <h1>Mom and I will make what is worth it last forever...</h1>
-            <p>
-              Using the Blockchain we are leaving a mark of love in our family
-              .. one mark that will last forever, help us ...
-            </p>
+            <Typography
+              mb={"2rem"}
+              m={"1rem"}
+              variant={"h2"}
+              color={"text.primary"}
+            >
+              Every child born into this world is a gift.
+            </Typography>
+            <Typography m={"1rem"} variant={"h5"} color={"text.primary"}>
+              One baby, as if she used the moonlight rays as a slide, shone with
+              bright light within her family from the moment she was born. And
+              who knows, maybe she will also carry this light to many many
+              others.{" "}
+            </Typography>
 
             <Stack
               className={styles.buttonContainer}
@@ -33,16 +49,23 @@ const Home = () => {
                 Start Minting
               </Button>
 
-              <Button variant="outlined">Learn about</Button>
+              <Button href={"./Little_Luna"} variant="outlined">
+                Meet Little Luna
+              </Button>
             </Stack>
           </Box>
-          <div className="imageContainer">
+          <Box
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            mt={"2rem"}
+            className="imageContainer"
+          >
             <img
               alt="moonAndbaby"
               className={styles.momAndBaby}
               src={draw}
             ></img>
-          </div>
+          </Box>
         </Box>
       </section>
 
@@ -61,7 +84,11 @@ const Home = () => {
               </div>
             </IconContext.Provider>
 
-            <h3> Puzzles </h3>
+            <Typography variant={"h4"}>
+              {" "}
+              Some one has stollen Little Luna drawings... and is sending them
+              back as puzzles!
+            </Typography>
 
             <IconContext.Provider
               value={{
@@ -77,15 +104,19 @@ const Home = () => {
           </span>
         </div>
 
-        <Typography marginBottom={"2rem"} variant="h6" color="text">
-          Every week we solve one puzzle, you can help us by minting one piece.
-        </Typography>
+        <Typography
+          marginBottom={"2rem"}
+          variant="h6"
+          color="text"
+        ></Typography>
 
         <Container>
           <Grid container>
             {[1, 2, 3, 4].map((x) => (
               <Grid item md={6} xs={8} key={x}>
                 <Box
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
                   marginBottom={2}
                   display={"flex"}
                   justifyContent={"center"}

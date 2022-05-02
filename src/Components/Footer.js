@@ -6,11 +6,33 @@ import AppBar from "@material-ui/core/AppBar";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  HatenaShareButton,
+  InstapaperShareButton,
+  LineShareButton,
+  LinkedinShareButton,
+  LivejournalShareButton,
+  MailruShareButton,
+  OKShareButton,
+  PinterestShareButton,
+  PocketShareButton,
+  RedditShareButton,
+  TelegramShareButton,
+  TumblrShareButton,
+  TwitterShareButton,
+  ViberShareButton,
+  VKShareButton,
+  WhatsappShareButton,
+  WorkplaceShareButton,
+} from "react-share";
 
 import { IconButton, Typography, Divider } from "@material-ui/core";
 import { fontSize } from "@material-ui/system";
 
 export default function Footer() {
+  const webpage = "www.littleluna.io";
   return (
     <footer>
       <AppBar
@@ -80,47 +102,53 @@ export default function Footer() {
               justifyContent: "center",
             }}
           >
-            <IconButton
-              aria-label="share"
-              sx={{
-                margin: "1rem",
-                "&:hover": {
-                  position: "relative",
-                  bottom: "2px ",
-                  color: "#833AB4",
-                },
-              }}
-            >
-              <InstagramIcon sx={{ fontSize: "40px" }} />{" "}
-            </IconButton>
-            <IconButton
-              aria-label="share"
-              sx={{
-                margin: "1rem",
+            <InstapaperShareButton url={webpage} quote={"Little Luna"}>
+              <IconButton
+                aria-label="share"
+                sx={{
+                  margin: "1rem",
+                  "&:hover": {
+                    position: "relative",
+                    bottom: "2px ",
+                    color: "#833AB4",
+                  },
+                }}
+              >
+                <InstagramIcon sx={{ fontSize: "40px" }} />{" "}
+              </IconButton>
+            </InstapaperShareButton>
+            <FacebookShareButton url={webpage} quote={"Little Luna"}>
+              <IconButton
+                aria-label="share"
+                sx={{
+                  margin: "1rem",
 
-                "&:hover": {
-                  position: "relative",
-                  bottom: "2px ",
-                  color: "#518CCB",
-                },
-              }}
-            >
-              <FacebookIcon sx={{ fontSize: "40px" }} />{" "}
-            </IconButton>
-            <IconButton
-              aria-label="share"
-              sx={{
-                margin: "1rem",
+                  "&:hover": {
+                    position: "relative",
+                    bottom: "2px ",
+                    color: "#518CCB",
+                  },
+                }}
+              >
+                <FacebookIcon sx={{ fontSize: "40px" }} />{" "}
+              </IconButton>
+            </FacebookShareButton>
+            <TwitterShareButton url={webpage} quote={"Little Luna"}>
+              <IconButton
+                aria-label="share"
+                sx={{
+                  margin: "1rem",
 
-                "&:hover": {
-                  position: "relative",
-                  bottom: "2px ",
-                  color: "#3b5998",
-                },
-              }}
-            >
-              <TwitterIcon sx={{ fontSize: "40px" }} />{" "}
-            </IconButton>
+                  "&:hover": {
+                    position: "relative",
+                    bottom: "2px ",
+                    color: "#3b5998",
+                  },
+                }}
+              >
+                <TwitterIcon sx={{ fontSize: "40px" }} />{" "}
+              </IconButton>
+            </TwitterShareButton>
           </Box>{" "}
           <Box
             textAlign="center"
@@ -128,7 +156,7 @@ export default function Footer() {
             pt={{ xs: 2, sm: 1 }}
             pb={{ xs: 2, sm: 0 }}
           >
-            Mom and I &reg; {new Date().getFullYear()}
+            Little Luna &reg; {new Date().getFullYear()}
           </Box>
         </Container>
       </AppBar>

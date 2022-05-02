@@ -7,7 +7,7 @@ import {
 } from "@material-ui/core";
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import draw_1 from "../Images/draw_1.jpg";
+import draw_1 from "../Images/family_4.jpeg";
 import Puzzles from "./Card";
 import abi from "../abi.json";
 
@@ -19,6 +19,8 @@ import Typography from "@mui/material/Typography";
 import { IconContext } from "react-icons";
 import { FaPuzzlePiece } from "react-icons/fa";
 import { LoadingButton } from "@mui/lab";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
@@ -32,6 +34,10 @@ const interface_ = new ethers.utils.Interface(abi);
 const Mumbay_key = process.env.REACT_APP_ALCHEMY_MUMBAY;  */
 
 const Mint = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const [account, setAccount] = useState("");
   const [mintingInfo, setMintingInfo] = useState("");
   const [NFTsupply, setNFTsupply] = useState("");
@@ -224,7 +230,7 @@ const Mint = () => {
             </div>
           </IconContext.Provider>
 
-          <h3> This week we are solving this puzzle </h3>
+          <h3> Help Little Luna to get her drawings Back!</h3>
 
           <IconContext.Provider
             value={{
@@ -241,7 +247,11 @@ const Mint = () => {
       </div>
 
       <Box className={styles.puzzle}>
-        <Card sx={{ maxWidth: 600 }}>
+        <Card
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          sx={{ maxWidth: 600 }}
+        >
           <CardActionArea>
             <CardMedia
               component="img"
@@ -262,16 +272,22 @@ const Mint = () => {
                 component="div"
               ></Typography>
               <Typography gutterBottom variant="h5" component="div">
-                Looking for moom
+                Every week we have one new puzzle, you can help us by minting
+                the next piece.
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                A description of the puzzle that we are solving ..elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
+                Someone eventually has the drawings, exactly as they doubted
+                before. But what is their purpose in playing this kind of game?!
+                What is going to happen next?! Are they going to ask for money
+                in return for giving them back? Or will they keep sending them
+                as puzzle pieces in MMS? At least this way they can be put back
+                together to make a soft copy of the drawings. And what if they
+                don’t send the complete pieces of each drawing? Luna’s mom was
+                perplexed, and later on Luna’s dad joined the club of confusion.
+                But one thought was giving them a glimpse of hope: The drawings
+                were not lost after all! And they couldn’t help but smile
+                because this means that Luna will soon draw again and her gift
+                will bloom.
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -371,7 +387,7 @@ const Mint = () => {
         </Card>
       </Box>
 
-      <section className={styles.section}>
+      {/*      <section className={styles.section}>
         <div className={styles.sectionTitle}>
           <span>
             <IconContext.Provider
@@ -408,7 +424,7 @@ const Mint = () => {
           variant="h6"
           color="text"
         >
-          Every week we solve one puzzle, you can help us by minting one piece.
+          Every week we have one puzzle, you can help us by minting the next piece.
         </Typography>
 
         <Container>
@@ -426,7 +442,7 @@ const Mint = () => {
             ))}
           </Grid>
         </Container>
-      </section>
+      </section> */}
     </Container>
   );
 };
