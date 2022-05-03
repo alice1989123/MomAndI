@@ -195,7 +195,6 @@ const Mint = () => {
             setAccount(accounts[0]);
 
             setNFTsupply(parseInt(supply.toString()));
-            console.log(accounts[0]);
             const Mintcontract2 = new ethers.Contract(
               CONFIG.CONTRACT_ADDRESS,
               new ethers.utils.Interface(abi),
@@ -215,7 +214,7 @@ const Mint = () => {
               "Your transaction has been submited it is now being proccesed"
             );
             setConnectionError("Your NFT has been minted! ");
-            setNFTsupply(NFTsupply + mintAmount);
+            setNFTsupply(`${parseInt(NFTsupply) + parseInt(mintAmount)}`);
             setLoading(false);
           } catch (e) {
             setConnectionError(
