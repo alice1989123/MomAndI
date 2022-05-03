@@ -93,7 +93,7 @@ const Little_Luna = () => {
           display={"flex"}
           justifyContent={"center"}
         >
-          <Card_ puzzle={10} key={10} />
+          <Card_ puzzle={12} key={12} />
         </Box>
         <TextWrapper
           subtitle={`The little painter was so proud of this achievement...`}
@@ -238,6 +238,8 @@ const Little_Luna = () => {
           decided to forget about the drawings for a while, not mentioning them
           to Luna anymore.`}
         />
+        <ImageWrapper image={5} />
+
         <TextWrapper
           subtitle={
             "Three months later, while Luna’s mom was preparing lunch..."

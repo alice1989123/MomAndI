@@ -72,7 +72,7 @@ const Contact = () => {
                   }}
                 >
                   <MailOutlineIcon fontSize="large" />{" "}
-                  <Typography marginLeft={1}> momAndI@gmail.com</Typography>
+                  <Typography marginLeft={1}> little_luna@gmail.com</Typography>
                 </IconButton>
               </Box>{" "}
             </CardActions>

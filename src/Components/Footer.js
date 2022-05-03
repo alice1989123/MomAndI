@@ -5,7 +5,9 @@ import Link from "@material-ui/core/Link";
 import AppBar from "@material-ui/core/AppBar";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import PinterestIcon from "@mui/icons-material/Pinterest";
+import { ReactComponent as Logo } from "../Images/Luna.svg";
+
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -43,12 +45,12 @@ export default function Footer() {
         position="static"
       >
         <Container sx={{ marginTop: "40px" }} maxWidth="lg">
-          <Grid container spacing={5}>
+          {/*     <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>
               <Box borderBottom={1}>Help</Box>
               <Box>
-                <Link href="/" color="inherit">
-                  Contact
+                <Link href="/Contact" color="inherit">
+                  Contact Us
                 </Link>
               </Box>
               <Box>
@@ -93,8 +95,7 @@ export default function Footer() {
                 </Link>
               </Box>
             </Grid>
-          </Grid>
-          <Divider light />
+          </Grid> */}
           <Box
             sx={{
               width: "100%",
@@ -102,7 +103,7 @@ export default function Footer() {
               justifyContent: "center",
             }}
           >
-            <InstapaperShareButton url={webpage} quote={"Little Luna"}>
+            <PinterestShareButton url={webpage} quote={"Little Luna"}>
               <IconButton
                 aria-label="share"
                 sx={{
@@ -110,13 +111,13 @@ export default function Footer() {
                   "&:hover": {
                     position: "relative",
                     bottom: "2px ",
-                    color: "#833AB4",
+                    color: "#E60023                   ",
                   },
                 }}
               >
-                <InstagramIcon sx={{ fontSize: "40px" }} />{" "}
+                <PinterestIcon sx={{ fontSize: "60px" }} />{" "}
               </IconButton>
-            </InstapaperShareButton>
+            </PinterestShareButton>
             <FacebookShareButton url={webpage} quote={"Little Luna"}>
               <IconButton
                 aria-label="share"
@@ -130,7 +131,7 @@ export default function Footer() {
                   },
                 }}
               >
-                <FacebookIcon sx={{ fontSize: "40px" }} />{" "}
+                <FacebookIcon sx={{ fontSize: "60px" }} />{" "}
               </IconButton>
             </FacebookShareButton>
             <TwitterShareButton url={webpage} quote={"Little Luna"}>
@@ -146,38 +147,31 @@ export default function Footer() {
                   },
                 }}
               >
-                <TwitterIcon sx={{ fontSize: "40px" }} />{" "}
+                <TwitterIcon sx={{ fontSize: "60px" }} />{" "}
               </IconButton>
             </TwitterShareButton>
           </Box>{" "}
+          <Divider light />
           <Box
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
             textAlign="center"
+            marginTop={2}
             mb={2}
             pt={{ xs: 2, sm: 1 }}
             pb={{ xs: 2, sm: 0 }}
           >
-            Little Luna &reg; {new Date().getFullYear()}
+            <Link href="/Contact" color="inherit">
+              <Box m={1} width={"150px"}>
+                <Logo />
+              </Box>{" "}
+            </Link>
+
+            <Box color={"black"}>&reg; {new Date().getFullYear()}</Box>
           </Box>
         </Container>
       </AppBar>
     </footer>
   );
 }
-
-/*   return (
-    <div className={styles.footer_container}>
-      <section className={styles.footer_subscription}>
-        <p>Join us to recibe our newsletter about family advice</p>
-        <p> You can unsuscribe at any time</p>
-        <div className={styles.input_area}>
-          <form>
-            <input name="email" type="email" placeholder="Your email" />
-            <Button variant="contained" endIcon={<SendIcon />}>
-              Suscribe
-            </Button>
-          </form>
-        </div>
-      </section>
-    </div>
-  );
-}; */

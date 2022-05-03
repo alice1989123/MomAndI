@@ -21,6 +21,14 @@ import draw_2 from "../Images/family_10.jpeg";
 import draw_3 from "../Images/family_7.jpeg";
 import draw_4 from "../Images/family_9.jpeg";
 
+import FacebookIcon from "@mui/icons-material/Telegram";
+import TwitterIcon from "@mui/icons-material/WhatsApp";
+import { ReactComponent as Logo } from "../Images/Luna.svg";
+
+import { TelegramShareButton, WhatsappShareButton } from "react-share";
+
+const webpage = "www.littleluna.io";
+
 const PuzzlesName = [
   "She is a little girl full of life...",
   "The little painter was so proud of this achievement...",
@@ -88,7 +96,35 @@ export default function ImgMediaCard({ puzzle }) {
           </Button>
         </Box>
         <Box>
-          <IconButton aria-label="add to favorites">
+          <TelegramShareButton url={webpage} quote={"Little Luna"}>
+            <IconButton
+              aria-label="share"
+              sx={{
+                "&:hover": {
+                  position: "relative",
+                  bottom: "2px ",
+                  color: "#518CCB",
+                },
+              }}
+            >
+              <FacebookIcon sx={{ fontSize: "30px" }} />{" "}
+            </IconButton>
+          </TelegramShareButton>
+          <WhatsappShareButton url={webpage} quote={"Little Luna"}>
+            <IconButton
+              aria-label="share"
+              sx={{
+                "&:hover": {
+                  position: "relative",
+                  bottom: "2px ",
+                  color: "green",
+                },
+              }}
+            >
+              <TwitterIcon sx={{ fontSize: "30px" }} />{" "}
+            </IconButton>
+          </WhatsappShareButton>
+          {/*  <IconButton aria-label="add to favorites">
             <FavoriteIcon
               sx={{
                 transition: "500ms",
@@ -107,7 +143,7 @@ export default function ImgMediaCard({ puzzle }) {
                 },
               }}
             />
-          </IconButton>
+          </IconButton> */}
         </Box>
       </CardActions>
     </Card>

@@ -55,10 +55,10 @@ const Home = () => {
             </Stack>
           </Box>
           <Box
+            display={"flex"}
             data-aos="fade-up"
             data-aos-duration="3000"
             mt={"2rem"}
-            className="imageContainer"
           >
             <img
               alt="moonAndbaby"
@@ -113,7 +113,7 @@ const Home = () => {
         <Container>
           <Grid container>
             {[1, 2, 3, 4].map((x) => (
-              <Grid item md={6} xs={8} key={x}>
+              <Grid item md={6} xs={12} key={x}>
                 <Box
                   data-aos="fade-up"
                   data-aos-duration="3000"

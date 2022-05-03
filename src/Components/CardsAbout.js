@@ -22,6 +22,8 @@ import draw_8 from "../Images/family_8.jpeg";
 import draw_9 from "../Images/family_9.jpeg";
 import draw_10 from "../Images/family_10.jpeg";
 import draw_11 from "../Images/family_11.jpeg";
+import draw_12 from "../Images/little_luna.gif";
+
 import { padding } from "@mui/system";
 
 const PuzzlesName = [
@@ -68,6 +70,9 @@ export default function ImgMediaCard({ puzzle }) {
     if (i === 11) {
       selectedImage = [draw_11];
     }
+    if (i === 12) {
+      selectedImage = [draw_12];
+    }
 
     return selectedImage;
   }
@@ -90,14 +95,14 @@ export default function ImgMediaCard({ puzzle }) {
           </Typography> */}
         </CardContent>
       </CardActionArea>
-      <CardActions
+      {/* <CardActions
         sx={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
         }}
-      >
-        <Box>
+      > */}
+      {/* <Box>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon
               sx={{
@@ -118,8 +123,9 @@ export default function ImgMediaCard({ puzzle }) {
               }}
             />
           </IconButton>
-        </Box>
-      </CardActions>
+        </Box> */}
+      {/*       </CardActions>
+       */}{" "}
     </Card>
   );
 }

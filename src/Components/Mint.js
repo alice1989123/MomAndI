@@ -3,12 +3,12 @@ import {
   Box,
   Container,
   CardActionArea,
-  Grid,
+  Paper,
 } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import draw_1 from "../Images/family_4.jpeg";
-import Puzzles from "./Card";
 import abi from "../abi.json";
 
 import styles from "./styles/Mint.module.scss";
@@ -24,25 +24,18 @@ import "aos/dist/aos.css";
 
 import { ethers } from "ethers";
 import { useState, useEffect } from "react";
-import { pink } from "@mui/material/colors";
-
-/* import abi from "../LazyNFT.json";
-import { LazyMinter } from "../LazyMinter";
-
-const contractAddress = "0xFDb98644ffC23913E392743dd8a8dA51a57a0538";
-const interface_ = new ethers.utils.Interface(abi);
-const Mumbay_key = process.env.REACT_APP_ALCHEMY_MUMBAY;  */
 
 const Mint = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+  const [Owner, setOwner] = useState(false);
   const [account, setAccount] = useState("");
-  const [mintingInfo, setMintingInfo] = useState("");
   const [NFTsupply, setNFTsupply] = useState("");
   const [loading, setLoading] = useState(false);
   const [connectionError, setConnectionError] = useState("");
+  const [AssetsTomint, setAssetsToMint] = useState(0);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -59,6 +52,7 @@ const Mint = () => {
     GAS_LIMIT: 0,
     MARKETPLACE: "",
     MARKETPLACE_LINK: "",
+    MAX_MINTING_VALUE: 0,
   });
 
   const dic_net = {
@@ -70,14 +64,13 @@ const Mint = () => {
       ),
   };
 
-  const interface_ = new ethers.utils.Interface(abi);
-  const provider = ethers.getDefaultProvider(dic_net);
-
-  const mintNFT = async () => {
-    const mintAmount = 1;
+  const withdraw = async () => {
+    const mintAmount = AssetsTomint;
     let cost = CONFIG.WEI_COST;
     let gasLimit = CONFIG.GAS_LIMIT;
-    let NFTsValue = ethers.utils.parseEther(String(0.05 * mintAmount));
+    let NFTsValue = ethers.utils.parseEther(
+      String(CONFIG.DISPLAY_COST * mintAmount)
+    );
     let totalGasLimit = String(gasLimit * mintAmount);
 
     const abiResponse = await fetch("/config/abi.json", {
@@ -113,18 +106,116 @@ const Mint = () => {
             setLoading(true);
             const supply = await Mintcontract1.totalSupply();
             setNFTsupply(parseInt(supply.toString()));
+            const owner = await Mintcontract1.owner();
+            setAccount(accounts[0]);
+
+            setNFTsupply(parseInt(supply.toString()));
             const Mintcontract2 = new ethers.Contract(
               CONFIG.CONTRACT_ADDRESS,
               new ethers.utils.Interface(abi),
               signer
             );
-            let tx = await Mintcontract2.mint(mintAmount, { value: NFTsValue });
+
+            let tx;
+            if (owner.toLowerCase() == accounts[0].toLowerCase()) {
+              setOwner(true);
+              tx = await Mintcontract2.withdraw();
+            }
             setConnectionError(
               "Your transaction has been submited it is now being proccesed"
             );
-            const receipt = await tx.wait();
+            setConnectionError("Your Transaction has been successfull! ");
+            setNFTsupply(NFTsupply + mintAmount);
+            setLoading(false);
+          } catch (e) {
+            setConnectionError(
+              " Something when wrong when trying to mint, please try again later"
+            );
+            setLoading(false);
+
+            console.log("error.... ", e);
+          }
+        } else {
+          setConnectionError(
+            "Please connect your Wallet to the correct Network"
+          );
+        }
+      } catch (e) {
+        setConnectionError(" Something when wrong, please try again later");
+        console.log(e);
+      }
+    } else {
+      setConnectionError(" Metmask is not installed, please install metamask");
+    }
+  };
+
+  const mintNFT = async () => {
+    const mintAmount = AssetsTomint;
+    let cost = CONFIG.WEI_COST;
+    let gasLimit = CONFIG.GAS_LIMIT;
+    let NFTsValue = ethers.utils.parseEther(
+      String(CONFIG.DISPLAY_COST * mintAmount)
+    );
+    let totalGasLimit = String(gasLimit * mintAmount);
+
+    const abiResponse = await fetch("/config/abi.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    const abi = await abiResponse.json();
+
+    const { ethereum } = window;
+
+    const metamaskIsInstalled = ethereum && ethereum.isMetaMask;
+    if (metamaskIsInstalled) {
+      const provider = new ethers.providers.Web3Provider(ethereum);
+
+      try {
+        const accounts = await provider.send("eth_requestAccounts", []);
+
+        const networkId = await ethereum.request({
+          method: "net_version",
+        });
+        if (networkId == CONFIG.NETWORK.ID) {
+          const signer = await provider.getSigner();
+          const Mintcontract1 = new ethers.Contract(
+            CONFIG.CONTRACT_ADDRESS,
+            new ethers.utils.Interface(abi),
+            signer
+          );
+          setConnectionError("");
+
+          try {
+            setLoading(true);
+            const supply = await Mintcontract1.totalSupply();
+            setNFTsupply(parseInt(supply.toString()));
+            const owner = await Mintcontract1.owner();
+            setAccount(accounts[0]);
+
+            setNFTsupply(parseInt(supply.toString()));
+            console.log(accounts[0]);
+            const Mintcontract2 = new ethers.Contract(
+              CONFIG.CONTRACT_ADDRESS,
+              new ethers.utils.Interface(abi),
+              signer
+            );
+
+            let tx;
+            if (owner.toLowerCase() == accounts[0].toLowerCase()) {
+              setOwner(true);
+              tx = await Mintcontract2.mint(accounts[0], mintAmount);
+            } else {
+              tx = await Mintcontract2.mint(accounts[0], mintAmount, {
+                value: NFTsValue,
+              });
+            }
+            setConnectionError(
+              "Your transaction has been submited it is now being proccesed"
+            );
             setConnectionError("Your NFT has been minted! ");
-            setNFTsupply(NFTsupply + 1);
+            setNFTsupply(NFTsupply + mintAmount);
             setLoading(false);
           } catch (e) {
             setConnectionError(
@@ -175,22 +266,19 @@ const Mint = () => {
           signer
         );
         const supply = await contract.totalSupply();
+        const owner = await contract.owner();
         setAccount(accounts[0]);
+
         setNFTsupply(parseInt(supply.toString()));
+        if (owner.toLowerCase() == accounts[0].toLowerCase()) {
+          setOwner(true);
+        }
       } catch (e) {
         console.log("error ", e);
       }
     } else {
       setConnectionError(" Metmask is not installed, please install metamask");
     }
-
-    /* const provider = new ethers.providers.Web3Provider(window.ethereum);
-    try {
-      let response = await provider.send("eth_requestAccounts", []);
-      setAccount(response[0]);
-    } catch (e) {
-      console.log(e);
-    } */
   };
 
   const getConfig = async () => {
@@ -327,13 +415,34 @@ const Mint = () => {
                   {CONFIG.CONTRACT_ADDRESS.slice(0, 20)}...
                 </a>
                 <Typography
+                  m={"1rem"}
                   variant="body"
                   color="text.secondary"
                   component="span"
                 >
-                  You can help us to solve this puzzle my minting the next
-                  piece.
+                  You can help us to solve this puzzle by minting up to
+                  {` ${CONFIG.MAX_MINTING_VALUE}`} pieces.
                 </Typography>
+
+                <Box maxWidth={"100px"}>
+                  <TextField
+                    color="secondary"
+                    type="number"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                      if (event.key > CONFIG.MAX_MINTING_VALUE) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onChange={(e) => {
+                      setAssetsToMint(e.target.value);
+                    }}
+                    //value={textValue} */
+                    label={"Pieces to mint"} //optional
+                  />
+                </Box>
                 <Typography
                   variant="h6"
                   color="text.secondary"
@@ -342,6 +451,7 @@ const Mint = () => {
                   {" "}
                   Each piece costs {CONFIG.DISPLAY_COST} Matic.
                 </Typography>
+
                 <Typography
                   variant="h8"
                   color="text.secondary"
@@ -360,7 +470,7 @@ const Mint = () => {
                     color="secondary"
                     variant="contained"
                   >
-                    Mint the next piece
+                    Mint the next pieces
                   </LoadingButton>
                 </Stack>
                 <a
@@ -381,6 +491,21 @@ const Mint = () => {
                 >
                   {connectionError}{" "}
                 </Typography>
+                <Stack spacing={2} direction="row">
+                  {Owner && (
+                    <LoadingButton
+                      className={styles.button}
+                      sx={{ margin: "1rem" }}
+                      loading={loading}
+                      onClick={withdraw}
+                      size={"big"}
+                      color="secondary"
+                      variant="contained"
+                    >
+                      Withdraw Funds
+                    </LoadingButton>
+                  )}
+                </Stack>
               </div>
             </CardContent>
           </CardActionArea>
