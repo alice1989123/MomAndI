@@ -9,13 +9,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import styles from "./styles/NavBar.module.scss";
 import { pink } from "@material-ui/core/colors";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../Images/Luna.svg";
 
 const pages = ["Home", "Little Luna", "Mint", "Contact"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,7 +27,6 @@ const NavBar = () => {
   };
 
   const handleCloseNavMenu = (page) => {
-    console.log(page);
     setAnchorElNav(null);
   };
 
@@ -45,14 +42,25 @@ const NavBar = () => {
       position="static"
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box marginLeft={"150px"} display={{ xs: "none", md: "flex" }}>
+        <Toolbar
+          sx={{
+            marginLeft: "3rem",
+            marginRight: "3rem",
+
+            display: "flex",
+            flexDirection: "row",
+            justifyItems: "center",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+          disableGutters
+        >
+          <a href={"./home"}>
             <Logo width={"200px"} />
-          </Box>
+          </a>
 
           <Box
             sx={{
-              width: "50%",
               display: "flex",
               flexDirection: { xs: "row", md: "column" },
               justifyItems: "center",
@@ -62,7 +70,6 @@ const NavBar = () => {
           >
             <Box
               sx={{
-                flexGrow: 1,
                 display: { xs: "flex", md: "none" },
               }}
             >
@@ -74,19 +81,19 @@ const NavBar = () => {
                 onClick={handleOpenNavMenu}
                 color="inherit"
               >
-                <MenuIcon />
+                <MenuIcon style={{ fontSize: 50 }} />
               </IconButton>
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
                 anchorOrigin={{
                   vertical: "bottom",
-                  horizontal: "left",
+                  horizontal: "right",
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "left",
+                  horizontal: "right",
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
@@ -109,16 +116,8 @@ const NavBar = () => {
                 ))}
               </Menu>
             </Box>
-            <Box
-              marginLeft={"150px"}
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-            >
-              <Logo width={"200px"} />
-            </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
                   href={page.split(" ").join("_")}

@@ -11,19 +11,14 @@ import { CardActionArea } from "@mui/material";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-/* import draw_1 from "../Images/draw_1.jpg";
-import draw_2 from "../Images/draw_2.jpg";
-import draw_3 from "../Images/draw_3.jpg";
-import draw_4 from "../Images/draw_4.jpg"; */
 
 import draw_1 from "../Images/family_1.jpeg";
 import draw_2 from "../Images/family_10.jpeg";
-import draw_3 from "../Images/family_7.jpeg";
+import draw_3 from "../Images/family_8.jpeg";
 import draw_4 from "../Images/family_9.jpeg";
 
 import FacebookIcon from "@mui/icons-material/Telegram";
 import TwitterIcon from "@mui/icons-material/WhatsApp";
-import { ReactComponent as Logo } from "../Images/Luna.svg";
 
 import { TelegramShareButton, WhatsappShareButton } from "react-share";
 
