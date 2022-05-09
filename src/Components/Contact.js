@@ -20,13 +20,23 @@ const Contact = () => {
       <Box className={styles.intro}>
         <Card sx={{ maxHeight: 800, maxWidth: 600 }}>
           <CardMedia
+            margin={"1rem"}
             component="img"
-            alt="green iguana"
+            alt="contact info"
             height="140"
             image={contact}
           />
           <CardContent>
-            <Typography gutterBottom variant="h3" component="div">
+            <Typography
+              gutterBottom
+              variant="h3"
+              component="div"
+              sx={{
+                width: "100%",
+                display: "flex",
+                margin: "1rem",
+              }}
+            >
               Contact Us
             </Typography>
             <Divider light />
@@ -34,6 +44,7 @@ const Contact = () => {
             <Typography
               sx={{
                 marginTop: "2rem",
+                margin: "1rem",
               }}
               variant="h4"
               color="text.secondary"
@@ -45,12 +56,17 @@ const Contact = () => {
                 sx={{
                   width: "100%",
                   display: "flex",
-                  justifyContent: "space-evenly",
+                  flexDirection: { xs: "column", md: "row" },
+                  justifyContent: "flex-start",
+
+                  alignItems: { xs: "flex-start" },
                 }}
               >
                 <IconButton
                   aria-label="share"
                   sx={{
+                    margin: "1rem",
+
                     "&:hover": {
                       position: "relative",
                       bottom: "2px ",
@@ -64,6 +80,8 @@ const Contact = () => {
                 <IconButton
                   aria-label="share"
                   sx={{
+                    margin: "1rem",
+
                     "&:hover": {
                       position: "relative",
                       bottom: "2px ",

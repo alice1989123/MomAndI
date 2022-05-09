@@ -26,8 +26,8 @@ const webpage = "www.littleluna.io";
 
 const PuzzlesName = [
   "She is a little girl full of life...",
-  "The little painter was so proud of this achievement...",
-  "Some one stolled Little Luna drawings!",
+  "The little painter was so proud of her achievement...",
+  "Some one stole Little Luna drawings!",
   "Luna looked at her mother and screamed:” My drawing!”",
 ];
 

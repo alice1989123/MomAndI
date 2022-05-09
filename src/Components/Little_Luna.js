@@ -178,16 +178,14 @@ const Little_Luna = () => {
           alright, then she gave her the mango juice that she liked so much but
           it was all in vain. She didn’t stop crying until mom promised they’ll
           go to the supermarket where she started smiling again since it was her
-          favorite place to go to.`}
+          favorite place to go to. Nevertheless little Luna always insisted on going to that same park where she got used to playing with some kids her age there`}
         />
         <ImageWrapper image={2} />
         <TextWrapper
-          subtitle={
-            "Nevertheless little Luna always insisted on going to that same park"
-          }
-          body={`Nevertheless little Luna always insisted on going to that same park,
-          where she got used to playing with some kids her age there. Three days
-          later, they went again. After sliding and swinging, little Luna came
+          subtitle={`Three days
+          later, they went again...`}
+          body={`
+            After sliding and swinging, little Luna came
           back to sit next to mom on “their” bank to eat her strawberries when
           she pointed at a shape carved into the wood of the bench’s back. As
           the mother looked, it was an octagon. A shape that the little artist
