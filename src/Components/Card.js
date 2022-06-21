@@ -33,13 +33,13 @@ const PuzzlesName = [
 
 const Contents = [
   `She is a little girl full of life, who loves running fast, twirling around and dancing ballet. While believing she is one, Luna loves dressing up as a princess,  wearing fairy wings and also getting her hair done into braids and pony tails. 
-She likes going to the park and to the supermarket. 
-When food is the subject, French fries, strawberries and surprisingly broccoli are the winners and there is nothing quite refreshing like mango juice!`,
+  She likes going to the park and to the supermarket. 
+  When food is the subject, French fries, strawberries and surprisingly broccoli are the winners and there is nothing quite refreshing like mango juice!`,
   `And she enjoyed showing her drawings to friends and relatives. Hence, whenever they had visitors or wanted to visit someone, Luna was excited to display her work and talk about it in her own toddler’s cute describing words.`,
-  `Later in the evening, Luna’s mom wanted to put back the drawings in Luna’s painting folder, when she found out that they were missing from her backpack! What a frustrating situation! And what a catastrophe to the little painter to unexpectedly lose her treasure! `,
+  `Later in the evening, Luna’s mom wanted to put back the drawings in Luna’s painting folder, when she found out that they were missing from her backpack! What a frustrating situation! And what a catastrophe to the little painter to unexpectedly lose her treasure!`,
   `Someone eventually has the drawings, exactly as they doubted before.
-But what is their purpose in playing this kind of game?! 
-What is going to happen next?! Are they going to ask for money in return for giving them back? Or will they keep sending them as puzzle pieces in MMS? At least this way they can be put back together to make a soft copy of the drawings.`,
+  But what is their purpose in playing this kind of game?! 
+  What is going to happen next?! Are they going to ask for money in return for giving them back? Or will they keep sending them as puzzle pieces in MMS? At least this way they can be put back together to make a soft copy of the drawings.`,
 ];
 
 export default function ImgMediaCard({ puzzle }) {

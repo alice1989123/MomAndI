@@ -468,12 +468,13 @@ const Mint = () => {
                     size={"big"}
                     color="secondary"
                     variant="contained"
+                    disabled="true"
                   >
                     Mint the next pieces
                   </LoadingButton>
                 </Stack>
                 <a
-                  href={CONFIG.MARKETPLACE_LINK}
+                  /* href={CONFIG.MARKETPLACE_LINK} */ //Deactivated until launch
                   style={{
                     fontSize: "large",
 

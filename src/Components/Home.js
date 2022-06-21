@@ -86,7 +86,7 @@ const Home = () => {
 
             <Typography variant={"h4"}>
               {" "}
-              Some one has stollen Little Luna drawings... and is sending them
+              Someone has stollen Little Luna drawings... and is sending them
               back as puzzles!
             </Typography>
 

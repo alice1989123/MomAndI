@@ -61,18 +61,16 @@ const Little_Luna = () => {
           subtitle={"Every child born into this world is a gift."}
           body={`One baby, as if she used the moonlight rays as a slide, shone with bright light within her family from the moment she was born. And who knows, maybe she will also carry this light to many many others. \n
 
-          She is a little girl full of life , who loves running fast, twirling around and dancing ballet. While believing she is one, Luna loves dressing up as a princess,  wearing fairy wings and also getting her hair done into braids and pony tails. 
-          She likes going to the park and to the supermarket. 
-          When food is the subject, French fries, strawberries and surprisingly broccoli are the winners and there is nothing quite refreshing like mango juice!
-          Her favorite character is Minnie Mouse and she is fond of cats. 
-          Besides playing with Lego, she loves reading and playing with her aunts.
-          Luna likes singing, especially “North Star – Peppa pig”, “Twinkle twinkle” and “ Row row you boat”. When it comes to dancing, it is not only to nursery rhymes but to songs like “Can’t stop the feeling” by Justin Timberlake and “Better when I’m dancing” by Meghan Trainor.
-          
-          She likes all colorful things but her favorite colors are red and pink and she is very interested in arts and crafts like coloring, play-dough activities, painting and finger painting.
-          
-          Doodling is almost every little child’s hobby and the first stage to learning to draw, but Luna’s wonderful drawing ability is a gift, although she is only a toddler. When you first look at her drawings, you see beauty in mixed paint. When you look further, you cannot but wonder about the magic in the intricate details.
-          
-            `}
+          She is a little girl full of life, who loves running fast, twirling around and dancing ballet. While believing she is one, Luna loves dressing up as a princess,  wearing fairy wings and also getting her hair done into braids and pony tails. 
+She likes going to the park and to the supermarket. 
+When food is the subject, French fries, strawberries and surprisingly broccoli are the winners and there is nothing quite refreshing like mango juice!
+Her favorite character is Minnie Mouse and she is fond of cats. 
+Besides playing with Lego, she loves reading and playing with her aunts.
+Luna likes singing, especially “North Star – Peppa pig”, “Twinkle twinkle” and “ Row row you boat”. When it comes to dancing, it is not only to nursery rhymes but to songs like “Can’t stop the feeling” by Justin Timberlake and “Better when I’m dancing” by Meghan Trainor.
+
+She likes all colorful things but her favorite colors are red and pink and she is very interested in arts and crafts like coloring, play-dough activities, painting and finger painting.
+
+Doodling is almost every little child’s hobby and the first stage to learning to draw, but Luna’s wonderful drawing ability is a gift, although she is only a toddler. When you first look at her drawings, you see beauty in mixed paint. When you look further, you cannot but wonder about the magic in the intricate details.`}
         ></TextWrapper>
         <Box
           margin={"2rem"}
@@ -84,15 +82,13 @@ const Little_Luna = () => {
           <Card_ puzzle={12} key={12} />
         </Box>
         <TextWrapper
-          subtitle={`          Overall Luna has a portfolio of nine beautiful paintings reflecting the innocence of a two year old and the creativity of a rising talent.          
-          `}
-          body={`The little painter was so proud of this achievement and she enjoyed showing her drawings to friends and relatives. Hence, whenever they had visitors or wanted to visit someone, Luna was excited to display her work and talk about it in her own toddler’s cute describing words.
-
+          body={`          Overall Luna has a portfolio of nine beautiful paintings reflecting the innocence of a two year old and the creativity of a rising talent.
+          The little painter was so proud of this achievement and she enjoyed showing her drawings to friends and relatives. Hence, whenever they had visitors or wanted to visit someone, Luna was excited to display her work and talk about it in her own toddler’s cute describing words.
+          
           Now on one sunny day, Luna and her mom were visiting a friend. They took Luna’s drawings with them as usual to show her the little princess’ amazing art. Luna enjoyed every single reaction of surprise and praise.
           On their way back home, Luna insisted on stopping, where she noticed a traffic stop sign.
           The little artist is obsessed with stop signs. Besides the fact that she loves finding them on the road, she also loves painting them.
-          That’s why her mom didn’t mind stopping and parking there, since she spotted a playground not far. Little Luna walked to the stop sign, touched it saying hello and waited for mommy to snap a photo of her there.
-          `}
+          That’s why her mom didn’t mind stopping and parking there, since she spotted a playground not far. Little Luna walked to the stop sign, touched it saying hello and waited for mommy to snap a photo of her there.`}
         />
         <ImageWrapper image={6} />
         <TextWrapper
@@ -101,12 +97,12 @@ const Little_Luna = () => {
           
           Half an hour had passed and little Luna was starting to get tired. So they said goodbye to their newly met short time companions and drove back home to be on time for the toddler’s nap.
           
-          Later in the evening, Luna’s mom wanted to put back the drawings in Luna’s painting folder, when she found out that they were missing from her backpack! What a frustrating situation! And what a catastrophe to the little painter to unexpectedly lose her treasure!`}
+          Later in the evening, Luna’s mom wanted to put back the drawings in Luna’s painting folder, when she found out that they were missing from her backpack! What a frustrating situation! And what a catastrophe to the little painter to unexpectedly lose her treasure! `}
         />
         <ImageWrapper image={7} />
         <TextWrapper
           subtitle={`How could that possibly happen?! `}
-          body={`   Of course after checking every corner in the car, Luna’s mom realized the only place she took her backpack to was the playground.
+          body={`Of course after checking every corner in the car, Luna’s mom realized the only place she took her backpack to was the playground.
 
           Could have they fallen there? But there is no way because she remembers putting the drawings back in the pink file, after showing them to that woman they met, and then putting the file in her backpack before closing the zipper.
           
@@ -149,26 +145,25 @@ const Little_Luna = () => {
           later, they went again...`}
           body={`
           After sliding and swinging, little Luna came back to sit next to mom on “their” bank to eat her strawberries when she pointed at a shape carved into the wood of the bench’s back. As the mother looked, it was an octagon. A shape that the little artist recognized as she got used to drawing it with every traffic stop sign. The octagon’s width was about four inches and the carving seemed somehow fresh, since the color of the lines was lighter and cleaner than the color of the wood.
-          Luna’s mom gave her the strawberries and decided to ignore that there is anything related to Luna’s drawings despite the details she observed.
-          
-          An hour later, Luna had her share of playing, so they walked back to the car. And as the mom wanted to open the rear door to put Luna in her car seat she couldn't help but notice like a golden shining object on the ground. She picked it up only to find out it is a key chain in the form of an octagon. She put it in her pocket, and quickly buckled Luna in her car seat. 
-          While driving back home she had hundreds of rushed thoughts.
-          This cannot be a coincidence! Someone is obviously trying to tell them that they have the drawings. But why mess around and not give them back automatically?!
-          
-          She couldn’t wait to tell her husband about the octagon incidents.
-          Luna’s father shared absolutely the same opinion.
-          Someone has the drawings and is sending these clues.
-          The findings were connected and not in the hands of pure chance!
-          He was intrigued yet somehow worried and upset.
-          His wife and daughter were obviously being watched, giving the fact that, their
-          stalker knew exactly where they usually sit at the playground and not only that but they are also being followed outside the park! To their car! So what will be next? Following them home?
-          
-          So the little artist’s parents decided to completely drop the pursuit of the drawings, and more exactly to stop stepping foot in that playground.
-          
-          And so it was… The whole family forgot about the nine drawings and the parents encouraged little Luna to draw again. 
-          
-          But she refused to draw like she did before, and whenever she tried, it was barely random scribbling.
-          `}
+Luna’s mom gave her the strawberries and decided to ignore that there is anything related to Luna’s drawings despite the details she observed.
+
+An hour later, Luna had her share of playing, so they walked back to the car. And as the mom wanted to open the rear door to put Luna in her car seat she couldn't help but notice like a golden shining object on the ground. She picked it up only to find out it is a key chain in the form of an octagon. She put it in her pocket, and quickly buckled Luna in her car seat. 
+While driving back home she had hundreds of rushed thoughts.
+This cannot be a coincidence! Someone is obviously trying to tell them that they have the drawings. But why mess around and not give them back automatically?!
+
+She couldn’t wait to tell her husband about the octagon incidents.
+Luna’s father shared absolutely the same opinion.
+Someone has the drawings and is sending these clues.
+The findings were connected and not in the hands of pure chance!
+He was intrigued yet somehow worried and upset.
+His wife and daughter were obviously being watched, giving the fact that, their
+stalker knew exactly where they usually sit at the playground and not only that but they are also being followed outside the park! To their car! So what will be next? Following them home?
+
+So the little artist’s parents decided to completely drop the pursuit of the drawings, and more exactly to stop stepping foot in that playground.
+
+And so it was… The whole family forgot about the nine drawings and the parents encouraged little Luna to draw again. 
+
+But she refused to draw like she did before, and whenever she tried, it was barely random scribbling.`}
         />
         <ImageWrapper image={5} />
 
