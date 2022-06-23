@@ -481,7 +481,7 @@ const Mint = () => {
                     overflow: "ellipsis",
                   }}
                 >
-                  {`See the collection  on ${CONFIG.MARKETPLACE}`}
+                  {`  ${CONFIG.MARKETPLACE} (Coming Soon)`}
                 </a>
                 <Typography
                   variant="h7"
