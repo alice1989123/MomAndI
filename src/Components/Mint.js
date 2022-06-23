@@ -363,18 +363,15 @@ const Mint = () => {
                 the next piece.
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Someone eventually has the drawings, exactly as they doubted
-                before. But what is their purpose in playing this kind of game?!
-                What is going to happen next?! Are they going to ask for money
-                in return for giving them back? Or will they keep sending them
-                as puzzle pieces in MMS? At least this way they can be put back
-                together to make a soft copy of the drawings. And what if they
-                don’t send the complete pieces of each drawing? Luna’s mom was
-                perplexed, and later on Luna’s dad joined the club of confusion.
-                But one thought was giving them a glimpse of hope: The drawings
-                were not lost after all! And they couldn’t help but smile
-                because this means that Luna will soon draw again and her gift
-                will bloom.
+                Someone had the drawings. But why were they playing this game?
+                Were they after money? Or would they keep sending puzzle pieces
+                in text messages? Can they put the pieces together to make the
+                full paintings? What if these pieces don’t complete the puzzle?
+                Luna’s mom was frustrated and confused. Later, Luna’s father
+                joined the same thoughts. But they had hope. The drawings were
+                not lost after all! So they couldn’t help but smile because this
+                means that Luna would possibly draw again and her gift would
+                blossom!
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -470,7 +467,9 @@ const Mint = () => {
                     variant="contained"
                     disabled="true"
                   >
-                    Mint the next pieces
+                    Mint(Coming soon)
+                    {/*                     Mint the next pieces
+                     */}{" "}
                   </LoadingButton>
                 </Stack>
                 <a

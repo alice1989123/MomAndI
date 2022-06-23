@@ -30,10 +30,10 @@ const Home = () => {
               Every child born into this world is a gift.
             </Typography>
             <Typography m={"1rem"} variant={"h5"} color={"text.primary"}>
-              One baby, as if she used the moonlight rays as a slide, shone with
-              bright light within her family from the moment she was born. And
-              who knows, maybe she will also carry this light to many many
-              others.{" "}
+              One baby, shined with bright light within her family from the
+              moment she was born. It was almost as if she used the moonlit rays
+              as a slide to come into this world. It was clear, destiny had
+              intended her light to shine on the world around her.
             </Typography>
 
             <Stack

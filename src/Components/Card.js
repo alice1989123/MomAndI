@@ -32,14 +32,14 @@ const PuzzlesName = [
 ];
 
 const Contents = [
-  `She is a little girl full of life, who loves running fast, twirling around and dancing ballet. While believing she is one, Luna loves dressing up as a princess,  wearing fairy wings and also getting her hair done into braids and pony tails. 
-  She likes going to the park and to the supermarket. 
-  When food is the subject, French fries, strawberries and surprisingly broccoli are the winners and there is nothing quite refreshing like mango juice!`,
-  `And she enjoyed showing her drawings to friends and relatives. Hence, whenever they had visitors or wanted to visit someone, Luna was excited to display her work and talk about it in her own toddler’s cute describing words.`,
-  `Later in the evening, Luna’s mom wanted to put back the drawings in Luna’s painting folder, when she found out that they were missing from her backpack! What a frustrating situation! And what a catastrophe to the little painter to unexpectedly lose her treasure!`,
-  `Someone eventually has the drawings, exactly as they doubted before.
-  But what is their purpose in playing this kind of game?! 
-  What is going to happen next?! Are they going to ask for money in return for giving them back? Or will they keep sending them as puzzle pieces in MMS? At least this way they can be put back together to make a soft copy of the drawings.`,
+  `She is a little girl full of life. She loves running fast, twirling around and dancing ballet. Luna loves dressing up as a princess, wearing fairy wings and getting her hair done into braids and ponytails.
+  She likes going to the park and to the supermarket.
+  When it comes to food, French fries, strawberries and surprisingly broccoli are the winners and there is nothing quite as refreshing like mango juice!
+  Her favorite character is Minnie Mouse, and she is fond of cats.`,
+  `Overall, Luna has a portfolio of nine beautiful paintings reflecting the innocence of a two-year-old and the creativity of a rising talent.
+The little painter loved showcasing her work to everyone she met, her eyes gleaming with excitement and pride every time.`,
+  `In the evening, Luna’s mom wanted to put the paintings back in their folder. She found out that they were missing from the bag they were in! This was a catastrophe for the little painter to lose her treasures! Where could they have gone?! After checking every corner of the house, and the car, Luna’s mom realized that the only place the backpack had been out of her hands was at the playground. `,
+  `Someone had the drawings. But why were they playing this game? Were they after money? Or would they keep sending puzzle pieces in text messages? Can they put the pieces together to make the full paintings? What if these pieces don’t complete the puzzle? `,
 ];
 
 export default function ImgMediaCard({ puzzle }) {
